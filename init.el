@@ -127,6 +127,7 @@ by Prelude.")
   (mapc 'load (directory-files prelude-personal-dir 't "^[^#].*el$")))
 
 (message "Prelude is ready to do thy bidding, Master %s!" current-user)
+(setq prelude-theme 'solarized-dark)
 
 (prelude-eval-after-init
  ;; greet the use with some useful tip
