@@ -12,5 +12,14 @@
 (setq ring-bell-function 'ignore)
 (load-theme 'solarized-dark)
 
+
+(add-hook 'python-mode-hook (lambda () 
+                              (flyspell-prog-mode)
+                              (linum-mode t)
+                              (smartparens-mode t)
+                              (whitespace-mode t)
+                              )
+          )
+
 (provide 'personal)
 ;;; personal.el ends here
