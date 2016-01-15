@@ -21,5 +21,9 @@
                               )
           )
 
-(provide 'personal)
+(add-to-list 'load-path "./vendor/neotree")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
+(Provide 'personal)
 ;;; personal.el ends here
