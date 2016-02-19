@@ -34,8 +34,16 @@
 ;; auto-completion
 (require 'auto-complete)
 
-;; fiplr config
+;; fiplr
 (setq fiplr-root-markers '(".git" ".svn"))
-(setq fiplr-ignored-globs '((directories (".git" ".svn"))
-                            (files ("*.jpg" "*.png" "*.zip" "*~"))))
+(setq fiplr-ignored-globs
+      '((directories (".git" ".svn" "build" "vendor" "node_modules" "non-git"))
+        (files ("*.jpg" "*.png" "*.zip" "*~")))
+      )
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
+
+;; multiple-cursors
+(require 'multiple-cursors)
+(define-key global-map (kbd "C-c a") 'mc/mark-all-like-this)
+(define-key global-map (kbd "M-n") 'mc/mark-next-lines)
+;; (define-key global-map (kbd "<C-right>") 'mc/mark-next-like-this)
