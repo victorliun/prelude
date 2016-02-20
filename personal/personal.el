@@ -1,3 +1,7 @@
+;;; package --- Summary
+;;; Commentary:
+;;; Code:
+
 (prelude-require-packages
  '(
    ace-jump-mode
@@ -8,6 +12,7 @@
    fiplr
    hackernews
    helm
+   ido-vertical-mode
    linum-relative
    multiple-cursors
    popwin
@@ -44,6 +49,16 @@
 
 ;; multiple-cursors
 (require 'multiple-cursors)
-(define-key global-map (kbd "C-c a") 'mc/mark-all-like-this)
+(define-key global-map (kbd "C-c m") 'mc/mark-all-like-this)
 (define-key global-map (kbd "M-n") 'mc/mark-next-lines)
-;; (define-key global-map (kbd "<C-right>") 'mc/mark-next-like-this)
+
+;; ace-jump-mode
+(require 'ace-jump-mode)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
+;; ido
+(require 'ido-vertical-mode)
+(ido-mode 1)
+(ido-vertical-mode 1)
+
+;;; personal ends here
