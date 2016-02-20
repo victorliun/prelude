@@ -7,9 +7,12 @@
    ace-jump-mode
    auto-complete
    color-theme
+   elpy
    emamux
    emmet-mode
    fiplr
+   flx
+   flx-ido
    hackernews
    helm
    ido-vertical-mode
@@ -17,7 +20,7 @@
    multiple-cursors
    popwin
    prodigy
-   elpy
+   visual-regexp
    )
  )
 
@@ -60,5 +63,15 @@
 (require 'ido-vertical-mode)
 (ido-mode 1)
 (ido-vertical-mode 1)
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+
+;; visual-regexp
+(require 'visual-regexp)
+(define-key global-map (kbd "C-c C-r") 'vr/replace)
+(define-key global-map (kbd "C-c C-q") 'vr/query-replace)
+(define-key global-map (kbd "C-c C-m") 'vr/mc-mark)
 
 ;;; personal ends here
