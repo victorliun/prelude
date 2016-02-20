@@ -53,7 +53,7 @@
 ;; multiple-cursors
 (require 'multiple-cursors)
 (define-key global-map (kbd "C-c m") 'mc/mark-all-like-this)
-(define-key global-map (kbd "M-n") 'mc/mark-next-lines)
+(define-key global-map (kbd "C-c C-n") 'mc/mark-next-lines)
 
 ;; ace-jump-mode
 (require 'ace-jump-mode)
@@ -73,5 +73,9 @@
 (define-key global-map (kbd "C-c C-r") 'vr/replace)
 (define-key global-map (kbd "C-c C-q") 'vr/query-replace)
 (define-key global-map (kbd "C-c C-m") 'vr/mc-mark)
+
+;; Preference
+(define-key global-map (kbd "M-p") 'move-text-up)
+(define-key global-map (Kbd "M-n") 'move-text-down)
 
 ;;; personal ends here
