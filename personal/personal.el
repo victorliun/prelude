@@ -52,8 +52,9 @@
 
 ;; multiple-cursors
 (require 'multiple-cursors)
-(define-key global-map (kbd "C-c m") 'mc/mark-all-like-this)
-(define-key global-map (kbd "C-c C-n") 'mc/mark-next-lines)
+(define-key global-map (kbd "C-c n") 'mc/mark-next-like-this)
+(define-key global-map (kbd "C-c C-n") 'mc/mark-all-like-this)
+(define-key global-map (kbd "C-c l") 'mc/mark-next-lines)
 
 ;; ace-jump-mode
 (require 'ace-jump-mode)
