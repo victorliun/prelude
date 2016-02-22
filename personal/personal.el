@@ -76,6 +76,6 @@
 
 ;; Preference
 (define-key global-map (kbd "M-p") 'move-text-up)
-(define-key global-map (Kbd "M-n") 'move-text-down)
+(define-key global-map (kbd "M-n") 'move-text-down)
 
 ;;; personal ends here
