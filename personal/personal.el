@@ -6,6 +6,7 @@
  '(
    ace-jump-mode
    auto-complete
+   buffer-move
    color-theme
    elpy
    emamux
@@ -52,9 +53,9 @@
 
 ;; multiple-cursors
 (require 'multiple-cursors)
-(define-key global-map (kbd "C-c n") 'mc/mark-next-like-this)
+(define-key global-map (kbd "C-c C-n") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-c C-p") 'mc/mark-previous-like-this)
 (define-key global-map (kbd "C-c C-n") 'mc/mark-all-like-this)
-(define-key global-map (kbd "C-c l") 'mc/mark-next-lines)
 
 ;; ace-jump-mode
 (require 'ace-jump-mode)
@@ -75,8 +76,13 @@
 (define-key global-map (kbd "C-c C-q") 'vr/query-replace)
 (define-key global-map (kbd "C-c C-m") 'vr/mc-mark)
 
-;; Preference
+;; buffer move key bindings
+(global-set-key (kbd "<C-S-left>")   'buf-move-left)
+(global-set-key (kbd "<C-S-right>")  'buf-move-right)
+
+;; key Preferences
 (define-key global-map (kbd "M-p") 'move-text-up)
 (define-key global-map (kbd "M-n") 'move-text-down)
+(define-key global-map (kbd "C-q") 'delete-window)
 
 ;;; personal ends here
