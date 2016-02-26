@@ -5,6 +5,7 @@
 (prelude-require-packages
  '(
    ace-jump-mode
+   ag
    auto-complete
    buffer-move
    color-theme
@@ -55,7 +56,7 @@
 (require 'multiple-cursors)
 (define-key global-map (kbd "C-c C-n") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-c C-p") 'mc/mark-previous-like-this)
-(define-key global-map (kbd "C-c C-n") 'mc/mark-all-like-this)
+(define-key global-map (kbd "C-c C-l") 'mc/mark-all-like-this)
 
 ;; ace-jump-mode
 (require 'ace-jump-mode)
