@@ -39,6 +39,7 @@
 ;; display relative line number
 (require 'linum-relative)
 (global-linum-mode 1)
+(smartparens-global-mode 1)
 (linum-relative-on)
 
 ;; auto-completion
@@ -47,16 +48,16 @@
 ;; fiplr
 (setq fiplr-root-markers '(".git" ".svn"))
 (setq fiplr-ignored-globs
-      '((directories (".git" ".svn" "build" "vendor" "node_modules" "non-git"))
+      '((directories (".git" ".svn" "build" "vendor" "node_modules" "non-git" "__pycache__" "env" "venv"))
         (files ("*.jpg" "*.png" "*.zip" "*~")))
       )
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
 
 ;; multiple-cursors
 (require 'multiple-cursors)
-(define-key global-map (kbd "C-c C-n") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-c C-p") 'mc/mark-previous-like-this)
-(define-key global-map (kbd "C-c C-l") 'mc/mark-all-like-this)
+(define-key global-map (kbd "C-c M-n") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-c M-p") 'mc/mark-previous-like-this)
+(define-key global-map (kbd "C-c M-l") 'mc/mark-all-like-this)
 
 ;; ace-jump-mode
 (require 'ace-jump-mode)
@@ -80,7 +81,7 @@
 ;; buffer move key bindings
 (global-set-key (kbd "<C-S-left>")   'buf-move-left)
 (global-set-key (kbd "<C-S-right>")  'buf-move-right)
-
+;; 
 ;; key Preferences
 (define-key global-map (kbd "M-p") 'move-text-up)
 (define-key global-map (kbd "M-n") 'move-text-down)
