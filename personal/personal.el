@@ -49,7 +49,7 @@
 (setq fiplr-root-markers '(".git" ".svn"))
 (setq fiplr-ignored-globs
       '((directories (".git" ".svn" "build" "vendor" "node_modules" "non-git" "__pycache__" "env" "venv"))
-        (files ("*.jpg" "*.png" "*.zip" "*~")))
+        (files ("*.jpg" "*.png" "*.zip" "*~" "*.pyc")))
       )
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
 
@@ -81,10 +81,12 @@
 ;; buffer move key bindings
 (global-set-key (kbd "<C-S-left>")   'buf-move-left)
 (global-set-key (kbd "<C-S-right>")  'buf-move-right)
-;; 
+;;
 ;; key Preferences
 (define-key global-map (kbd "M-p") 'move-text-up)
 (define-key global-map (kbd "M-n") 'move-text-down)
 (define-key global-map (kbd "C-q") 'delete-window)
+
+(scroll-bar-mode -1)
 
 ;;; personal ends here
