@@ -87,7 +87,8 @@
 (define-key global-map (kbd "M-p") 'move-text-up)
 (define-key global-map (kbd "M-n") 'move-text-down)
 (define-key global-map (kbd "C-q") 'delete-window)
-
+(global-set-key (kbd "M-P") (kbd "C-u 1 C-v"))
+(global-set-key (kbd "M-N") (kbd "C-u 1 M-v"))
 (scroll-bar-mode -1)
 
 ;;; personal ends here
