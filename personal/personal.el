@@ -17,6 +17,7 @@
    flx-ido
    hackernews
    helm
+   helm-mt
    ido-vertical-mode
    linum-relative
    multiple-cursors
@@ -83,12 +84,23 @@
 (global-set-key (kbd "<C-S-left>")   'buf-move-left)
 (global-set-key (kbd "<C-S-right>")  'buf-move-right)
 ;;
+
+;; multi-term
+(require 'helm-mt)
+(global-set-key (kbd "C-x t") 'helm-mt)
+(helm-mt/wrap-shells t)
+ ;;(setq multi-term-program "/bin/bash")
+
 ;; key Preferences
 (define-key global-map (kbd "M-p") 'move-text-up)
 (define-key global-map (kbd "M-n") 'move-text-down)
 (define-key global-map (kbd "C-q") 'delete-window)
 (global-set-key (kbd "M-N") (kbd "C-u 1 C-v"))
 (global-set-key (kbd "M-P") (kbd "C-u 1 M-v"))
-(scroll-bar-mode -1)
+;; (scroll-bar-mode -1)
 
+;; Personal status bar settings
+(setq display-time-day-and-date t
+      display-time-24hr-format t)
+(display-time)
 ;;; personal ends here
